@@ -3,6 +3,41 @@ import Typography from '@/components/atoms/Typography';
 import ProductCard from '@/components/molecules/ProductCard';
 import { products } from '@/lib/data/products';
 import { notFound } from 'next/navigation';
+import type { Metadata } from 'next';
+
+// Generate static params for all product IDs
+export async function generateStaticParams() {
+  return products.map((product) => ({
+    id: product.id.toString(),
+  }));
+}
+
+// Generate metadata for each product
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
+  const { id } = await params;
+  const product = products.find(p => p.id === parseInt(id));
+
+  if (!product) {
+    return {
+      title: 'Producto no encontrado - Isolla',
+    };
+  }
+
+  return {
+    title: `${product.title} - ${product.category} | Isolla`,
+    description: product.description || `${product.title} - ${product.price}`,
+    openGraph: {
+      title: `${product.title} - Isolla`,
+      description: product.description || `${product.title} - ${product.price}`,
+      images: [product.image],
+      type: 'website',
+    },
+  };
+}
 
 export default async function ProductoPage({
   params,

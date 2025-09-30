@@ -25,6 +25,7 @@ const crimson = Crimson_Text({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://isolla.vercel.app'),
   title: "Isolla - Espacio de diseño de mobiliario contemporáneo",
   description: "ISOLLA surge de la pasión por la artesanía y el amor al diseño. Muebles únicos que combinan creatividad, estética y significado cultural.",
   keywords: ["muebles", "diseño contemporáneo", "mobiliario", "artesanía", "diseño de interiores"],
