@@ -17,29 +17,30 @@ export default function ProductCard({ id, image, category, title, price }: Produ
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <Link
-      href={`/productos/${id}`}
-      className="group cursor-pointer"
-      ref={ref}
-    >
-      <div className={`w-full h-[550px] bg-gray-200 mb-2 overflow-hidden transition-all duration-500 ${isVisible ? 'animate-scale-in' : 'opacity-0'}`}>
-        <Image
-          src={image}
-          alt={title}
-          width={445}
-          height={550}
-          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 ease-out"
-        />
-      </div>
-      <Typography variant="label" font="inter" className="mb-2">
-        {category}
-      </Typography>
-      <Typography variant="lg" font="crimson" className="mb-2 leading-none">
-        {title}
-      </Typography>
-      <Typography variant="body" font="crimson" color="secondary" className="leading-none">
-        {price}
-      </Typography>
-    </Link>
+    <div ref={ref}>
+      <Link
+        href={`/productos/${id}`}
+        className="group cursor-pointer block"
+      >
+        <div className={`w-full h-[550px] bg-gray-200 mb-2 overflow-hidden transition-all duration-500 ${isVisible ? 'animate-scale-in' : 'opacity-0'}`}>
+          <Image
+            src={image}
+            alt={title}
+            width={445}
+            height={550}
+            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 ease-out"
+          />
+        </div>
+        <Typography variant="label" font="inter" className="mb-2">
+          {category}
+        </Typography>
+        <Typography variant="lg" font="crimson" className="mb-2 leading-none">
+          {title}
+        </Typography>
+        <Typography variant="body" font="crimson" color="secondary" className="leading-none">
+          {price}
+        </Typography>
+      </Link>
+    </div>
   );
 }
