@@ -34,7 +34,7 @@ export default function ProductCard({ id, image, category, title, price }: Produ
         <Typography variant="label" font="inter" className="mb-2">
           {category}
         </Typography>
-        <Typography variant="lg" font="crimson" className="mb-2 leading-none">
+        <Typography variant="h3" font="crimson" className="mb-2 leading-none text-[24px]">
           {title}
         </Typography>
         <Typography variant="body" font="crimson" color="secondary" className="leading-none">
