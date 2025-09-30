@@ -84,7 +84,7 @@ export default function DesignerShowcase({
               <Typography
                 key={index}
                 variant="body"
-                font="bricolage"
+                font="crimson"
                 style={{ lineHeight: '28px' }}
                 className={`text-[16px] md:text-[18px] ${index < paragraphs.length - 1 ? 'mb-4' : ''}`}
               >
