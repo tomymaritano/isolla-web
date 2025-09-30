@@ -11,8 +11,7 @@ export interface Product {
   category: string;
   title: string;
   price: string;
-  image: string; // Main image for product card
-  images?: string[]; // Array of additional images for product detail page
+  image: string;
   description?: string;
   designerId: string; // Reference to designer
   information?: string;
