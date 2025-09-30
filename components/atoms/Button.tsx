@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { typography } from '@/lib/design-system';
 
 interface ButtonProps {
   href?: string;

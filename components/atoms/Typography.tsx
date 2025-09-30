@@ -1,4 +1,4 @@
-import { typography, colors } from '@/lib/design-system';
+import { colors } from '@/lib/design-system';
 
 interface TypographyProps {
   variant: 'h1' | 'h2' | 'h3' | 'body' | 'caption' | 'label';

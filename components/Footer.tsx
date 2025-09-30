@@ -21,8 +21,6 @@ const emails = [
 ];
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
-
   return (
     <footer className="mt-auto border-t border-gray-200" role="contentinfo">
       <div className="px-4 md:px-10 py-8 md:py-16">

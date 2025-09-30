@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Typography from '@/components/atoms/Typography';
 import ProductCard from '@/components/molecules/ProductCard';
-import { products, getDesignerById } from '@/lib/data/products';
+import { products } from '@/lib/data/products';
 import { notFound } from 'next/navigation';
 
 export default async function ProductoPage({
@@ -17,8 +17,6 @@ export default async function ProductoPage({
     notFound();
   }
 
-  const designer = getDesignerById(product.designerId);
-
   return (
     <div className="min-h-screen">
       <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -27,7 +25,7 @@ export default async function ProductoPage({
           <div className="relative h-full">
             <Image
               src={product.image}
-              alt={product.name}
+              alt={product.title}
               fill
               className="object-cover"
               priority
@@ -48,11 +46,6 @@ export default async function ProductoPage({
             <p className="font-crimson mb-6" style={{ fontSize: '40px', lineHeight: '49.5px', letterSpacing: '-0.6px' }}>
               {product.price}
             </p>
-            {product.designer && (
-              <p className="font-crimson mb-6" style={{ fontSize: '18px' }}>
-                {product.designer}
-              </p>
-            )}
             {product.description && (
               <p className="font-crimson mb-8" style={{ fontSize: '18px' }}>
                 {product.description}

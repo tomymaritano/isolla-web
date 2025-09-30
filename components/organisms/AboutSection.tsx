@@ -3,7 +3,6 @@
 import Section from '@/components/atoms/Section';
 import Container from '@/components/atoms/Container';
 import Typography from '@/components/atoms/Typography';
-import { colors } from '@/lib/design-system';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 export default function AboutSection() {

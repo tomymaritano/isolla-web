@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { colors, typography } from "@/lib/design-system";
+import { typography } from "@/lib/design-system";
 import { useState } from "react";
 
 const navLinks = [
