@@ -1,6 +1,7 @@
 import ProductCard from '@/components/molecules/ProductCard';
 import Section from '@/components/atoms/Section';
 import Container from '@/components/atoms/Container';
+import Button from '@/components/atoms/Button';
 import { products } from '@/lib/data/products';
 
 export default function ProductGrid() {
@@ -15,6 +16,11 @@ export default function ProductGrid() {
           {featuredProducts.map((product) => (
             <ProductCard key={product.id} {...product} />
           ))}
+        </div>
+        <div className="flex justify-center mt-12">
+          <Button href="/productos" variant="outline">
+            CATÁLOGO
+          </Button>
         </div>
       </Container>
     </Section>

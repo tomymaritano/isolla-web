@@ -8,13 +8,13 @@ export interface Designer {
 export const designers: Designer[] = [
   {
     id: 1,
-    name: 'Pieter Adams',
+    name: 'Oscar Maschera',
     image: '/placeholder.jpg',
     href: '/productos',
   },
   {
     id: 2,
-    name: 'Pieter Adams',
+    name: 'Arte Brotto',
     image: '/placeholder.jpg',
     href: '/productos',
   },
