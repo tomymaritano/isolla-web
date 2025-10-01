@@ -22,7 +22,7 @@ export default function ProductCard({ id, image, category, title, price }: Produ
         href={`/productos/${id}`}
         className="group cursor-pointer block"
       >
-        <div className={`w-full h-[550px] bg-gray-200 mb-2 overflow-hidden transition-all duration-500 ${isVisible ? 'animate-scale-in' : 'opacity-0'}`}>
+        <div className={`w-full aspect-[4/5] bg-gray-200 mb-2 overflow-hidden transition-all duration-500 ${isVisible ? 'animate-scale-in' : 'opacity-0'}`}>
           <Image
             src={image}
             alt={title}
