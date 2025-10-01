@@ -8,12 +8,13 @@ export default function DesignSpaceSection() {
     <Section className="border-t border-b" style={{ borderColor: '#86858A' }}>
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          <div className="relative h-[800px] lg:h-[1141px] bg-gray-200 overflow-hidden">
+          <div className="relative w-full bg-gray-200">
             <Image
               src="/sections/design-space.png"
               alt="Espacio de diseño de mobiliario contemporáneo"
-              fill
-              className="object-contain"
+              width={1920}
+              height={1141}
+              className="w-full h-auto"
             />
           </div>
           <div className="flex items-center justify-center">
