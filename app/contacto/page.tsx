@@ -33,10 +33,10 @@ export default function ContactoPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
           {/* Left Column - Info */}
           <div>
-            <h1 className="font-bricolage mb-8" style={{ fontSize: '75px', lineHeight: '1.1', letterSpacing: '-1.3px' }}>
+            <h1 className="font-bricolage mb-12" style={{ fontSize: '75px', lineHeight: '1.1', letterSpacing: '-1.3px' }}>
               Contacto
             </h1>
-            <p className="font-crimson mb-12" style={{ fontSize: '24px', lineHeight: '30px', letterSpacing: '-0.3px' }}>
+            <p className="font-crimson mb-16" style={{ fontSize: '24px', lineHeight: '30px', letterSpacing: '-0.3px' }}>
               Escribinos para conocer nuestras novedades, coordinar una visita al showroom o explorar nuevas colaboraciones
             </p>
             <p className="font-inter" style={{ fontSize: '20px' }}>
@@ -46,7 +46,7 @@ export default function ContactoPage() {
 
           {/* Right Column - Form */}
           <div>
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-8">
               <div className="grid grid-cols-2 gap-4">
                 <input
                   type="text"
@@ -54,7 +54,12 @@ export default function ContactoPage() {
                   placeholder="Nombre"
                   value={formData.nombre}
                   onChange={handleChange}
-                  className="border-b-2 border-black pb-2 font-inter text-[16px] focus:outline-none focus:border-gray-600 transition bg-transparent"
+                  className="border font-inter text-[16px] focus:outline-none focus:border-gray-400 transition px-4 py-3"
+                  style={{
+                    borderColor: '#E8E8E8',
+                    backgroundColor: '#F8F8F8',
+                    color: 'rgba(6, 39, 44, 0.6)'
+                  }}
                   required
                 />
                 <input
@@ -63,7 +68,12 @@ export default function ContactoPage() {
                   placeholder="Apellido"
                   value={formData.apellido}
                   onChange={handleChange}
-                  className="border-b-2 border-black pb-2 font-inter text-[16px] focus:outline-none focus:border-gray-600 transition bg-transparent"
+                  className="border font-inter text-[16px] focus:outline-none focus:border-gray-400 transition px-4 py-3"
+                  style={{
+                    borderColor: '#E8E8E8',
+                    backgroundColor: '#F8F8F8',
+                    color: 'rgba(6, 39, 44, 0.6)'
+                  }}
                   required
                 />
               </div>
@@ -74,7 +84,12 @@ export default function ContactoPage() {
                 placeholder="Email"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full border-b-2 border-black pb-2 font-inter text-[16px] focus:outline-none focus:border-gray-600 transition bg-transparent"
+                className="w-full border font-inter text-[16px] focus:outline-none focus:border-gray-400 transition px-4 py-3"
+                style={{
+                  borderColor: '#E8E8E8',
+                  backgroundColor: '#F8F8F8',
+                  color: 'rgba(6, 39, 44, 0.6)'
+                }}
                 required
               />
 
@@ -84,7 +99,12 @@ export default function ContactoPage() {
                 placeholder="Teléfono"
                 value={formData.telefono}
                 onChange={handleChange}
-                className="w-full border-b-2 border-black pb-2 font-inter text-[16px] focus:outline-none focus:border-gray-600 transition bg-transparent"
+                className="w-full border font-inter text-[16px] focus:outline-none focus:border-gray-400 transition px-4 py-3"
+                style={{
+                  borderColor: '#E8E8E8',
+                  backgroundColor: '#F8F8F8',
+                  color: 'rgba(6, 39, 44, 0.6)'
+                }}
                 required
               />
 
@@ -94,7 +114,12 @@ export default function ContactoPage() {
                 placeholder="País"
                 value={formData.pais}
                 onChange={handleChange}
-                className="w-full border-b-2 border-black pb-2 font-inter text-[16px] focus:outline-none focus:border-gray-600 transition bg-transparent"
+                className="w-full border font-inter text-[16px] focus:outline-none focus:border-gray-400 transition px-4 py-3"
+                style={{
+                  borderColor: '#E8E8E8',
+                  backgroundColor: '#F8F8F8',
+                  color: 'rgba(6, 39, 44, 0.6)'
+                }}
                 required
               />
 
@@ -104,7 +129,12 @@ export default function ContactoPage() {
                 value={formData.consulta}
                 onChange={handleChange}
                 rows={4}
-                className="w-full border-b-2 border-black pb-2 font-inter text-[16px] focus:outline-none focus:border-gray-600 transition resize-none bg-transparent"
+                className="w-full border font-inter text-[16px] focus:outline-none focus:border-gray-400 transition resize-none px-4 py-3"
+                style={{
+                  borderColor: '#E8E8E8',
+                  backgroundColor: '#F8F8F8',
+                  color: 'rgba(6, 39, 44, 0.6)'
+                }}
                 required
               />
 
