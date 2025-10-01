@@ -17,15 +17,10 @@ export default function DesignSpaceSection() {
               className="w-full h-auto"
             />
           </div>
-          <div className="flex items-center justify-center">
-            <Typography
-              variant="h1"
-              font="bricolage"
-              className="text-center max-w-[600px]"
-              style={{ lineHeight: '64px' }}
-            >
+          <div className="flex items-center justify-center px-4">
+            <h2 className="font-bricolage text-center max-w-[600px] text-[32px] md:text-[48px] lg:text-[64px] leading-tight md:leading-snug">
               Espacio de diseño de mobiliario contemporaneo
-            </Typography>
+            </h2>
           </div>
         </div>
       </Container>
