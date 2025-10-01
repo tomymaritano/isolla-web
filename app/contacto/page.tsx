@@ -47,7 +47,8 @@ export default function ContactoPage() {
           {/* Right Column - Form */}
           <div>
             <form onSubmit={handleSubmit} className="space-y-8">
-              <div className="grid grid-cols-2 gap-4">
+              {/* Primera fila: Nombre, Apellido, Email */}
+              <div className="grid grid-cols-3 gap-4">
                 <input
                   type="text"
                   name="nombre"
@@ -76,53 +77,55 @@ export default function ContactoPage() {
                   }}
                   required
                 />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="border font-inter text-[16px] focus:outline-none focus:border-gray-400 transition px-4 py-3"
+                  style={{
+                    borderColor: '#E8E8E8',
+                    backgroundColor: '#F8F8F8',
+                    color: 'rgba(6, 39, 44, 0.6)'
+                  }}
+                  required
+                />
               </div>
 
-              <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                value={formData.email}
-                onChange={handleChange}
-                className="w-full border font-inter text-[16px] focus:outline-none focus:border-gray-400 transition px-4 py-3"
-                style={{
-                  borderColor: '#E8E8E8',
-                  backgroundColor: '#F8F8F8',
-                  color: 'rgba(6, 39, 44, 0.6)'
-                }}
-                required
-              />
+              {/* Segunda fila: Teléfono, País */}
+              <div className="grid grid-cols-2 gap-4">
+                <input
+                  type="tel"
+                  name="telefono"
+                  placeholder="Teléfono"
+                  value={formData.telefono}
+                  onChange={handleChange}
+                  className="border font-inter text-[16px] focus:outline-none focus:border-gray-400 transition px-4 py-3"
+                  style={{
+                    borderColor: '#E8E8E8',
+                    backgroundColor: '#F8F8F8',
+                    color: 'rgba(6, 39, 44, 0.6)'
+                  }}
+                  required
+                />
+                <input
+                  type="text"
+                  name="pais"
+                  placeholder="País"
+                  value={formData.pais}
+                  onChange={handleChange}
+                  className="border font-inter text-[16px] focus:outline-none focus:border-gray-400 transition px-4 py-3"
+                  style={{
+                    borderColor: '#E8E8E8',
+                    backgroundColor: '#F8F8F8',
+                    color: 'rgba(6, 39, 44, 0.6)'
+                  }}
+                  required
+                />
+              </div>
 
-              <input
-                type="tel"
-                name="telefono"
-                placeholder="Teléfono"
-                value={formData.telefono}
-                onChange={handleChange}
-                className="w-full border font-inter text-[16px] focus:outline-none focus:border-gray-400 transition px-4 py-3"
-                style={{
-                  borderColor: '#E8E8E8',
-                  backgroundColor: '#F8F8F8',
-                  color: 'rgba(6, 39, 44, 0.6)'
-                }}
-                required
-              />
-
-              <input
-                type="text"
-                name="pais"
-                placeholder="País"
-                value={formData.pais}
-                onChange={handleChange}
-                className="w-full border font-inter text-[16px] focus:outline-none focus:border-gray-400 transition px-4 py-3"
-                style={{
-                  borderColor: '#E8E8E8',
-                  backgroundColor: '#F8F8F8',
-                  color: 'rgba(6, 39, 44, 0.6)'
-                }}
-                required
-              />
-
+              {/* Tercera fila: Consulta */}
               <textarea
                 name="consulta"
                 placeholder="Dejanos tu consulta"
