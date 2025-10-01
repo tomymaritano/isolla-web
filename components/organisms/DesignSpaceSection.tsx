@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Section from '@/components/atoms/Section';
 import Container from '@/components/atoms/Container';
-import Typography from '@/components/atoms/Typography';
 
 export default function DesignSpaceSection() {
   return (

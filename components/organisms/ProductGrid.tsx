@@ -2,7 +2,7 @@ import ProductCard from '@/components/molecules/ProductCard';
 import Section from '@/components/atoms/Section';
 import Container from '@/components/atoms/Container';
 import Button from '@/components/atoms/Button';
-import { products } from '@/lib/data/products';
+import { products, Product } from '@/lib/data/products';
 
 interface ProductGridProps {
   showAll?: boolean;
@@ -13,7 +13,9 @@ export default function ProductGrid({ showAll = false }: ProductGridProps) {
   const featuredProductIds = [6, 2, 9, 1]; // Bombo 02, Caballito piccolo, Coffe Table, Caballito petit
   const displayProducts = showAll
     ? products
-    : featuredProductIds.map(id => products.find(p => p.id === id)).filter(Boolean);
+    : featuredProductIds
+        .map(id => products.find(p => p.id === id))
+        .filter((product): product is Product => product !== undefined);
 
   return (
     <Section>
