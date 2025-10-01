@@ -160,7 +160,7 @@ export default function ContactoPage() {
 
               <button
                 type="submit"
-                className="bg-black text-white px-8 py-3 font-inter text-[16px] hover:bg-gray-800 transition mt-4"
+                className="w-full bg-black text-white px-8 py-3 font-inter text-[16px] hover:bg-gray-800 transition mt-4"
               >
                 CONSULTAR
               </button>
