@@ -10,7 +10,7 @@ export default function DesignSpaceSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="relative h-[800px] lg:h-[1141px] bg-gray-200 overflow-hidden">
             <Image
-              src="/placeholder.jpg"
+              src="/sections/design-space.png"
               alt="Espacio de diseño de mobiliario contemporáneo"
               fill
               className="object-cover"

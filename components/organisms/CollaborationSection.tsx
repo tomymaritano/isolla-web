@@ -24,7 +24,7 @@ export default function CollaborationSection() {
           </div>
           <div className="relative h-[800px] lg:h-[1141px] bg-gray-200 overflow-hidden">
             <Image
-              src="/placeholder.jpg"
+              src="/sections/collaboration.png"
               alt="Colaboración de diseño Isolla"
               fill
               className="object-cover"
