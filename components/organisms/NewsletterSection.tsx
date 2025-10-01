@@ -7,7 +7,7 @@ export default function NewsletterSection() {
     <section className="relative h-[400px] md:h-[600px] bg-gray-200">
       <div className="absolute inset-0">
         <Image
-          src="/newsletter.jpg"
+          src="/sections/newsletter.jpg"
           alt="Espacio de contacto Isolla"
           fill
           className="object-cover"

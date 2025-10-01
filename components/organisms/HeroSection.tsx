@@ -6,7 +6,7 @@ export default function HeroSection() {
   return (
     <section className="relative h-screen w-full bg-gray-900 flex items-end overflow-hidden">
       <Image
-        src="/heromain.jpg"
+        src="/heroes/home.jpg"
         alt="Hero background"
         fill
         className="object-cover animate-scale-in"

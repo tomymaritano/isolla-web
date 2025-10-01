@@ -8,7 +8,7 @@ export default function ProductosPage() {
       {/* Hero Section */}
       <section className="relative h-[400px] md:h-[672px] flex items-center justify-center">
         <Image
-          src="/productos.jpg"
+          src="/sections/products.jpg"
           alt="Productos"
           fill
           className="object-cover"

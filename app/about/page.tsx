@@ -9,7 +9,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="relative h-[400px] md:h-[600px] flex items-center justify-center">
         <Image
-          src="/test.jpg"
+          src="/heroes/about.jpg"
           alt="Quienes Somos"
           fill
           className="object-cover"

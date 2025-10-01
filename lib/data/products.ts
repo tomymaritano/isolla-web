@@ -33,7 +33,7 @@ export const designers: Designer[] = [
       'OSCAR MASCHERA surge del amor y el compromiso de Oscar y Claudia con su oficio artístico.',
       'Oscar Maschera colabora con reconocidos diseñadores internacionales como Néstor Perkal, Claude Bouchard y Nathalie du Pasquier.'
     ],
-    images: ['/test.jpg', '/test.jpg', '/test.jpg']
+    images: ['/designers/oscar-maschera/showcase-1.png', '/designers/oscar-maschera/showcase-2.png', '/designers/oscar-maschera/showcase-3.png']
   },
   {
     id: 'pieter-adam',
@@ -44,7 +44,7 @@ export const designers: Designer[] = [
       'Sus mesas destacan por el equilibrio entre presencia y sofisticación, con estructuras sólidas de bronce o acero combinadas con superficies como el mármol o maderas seleccionadas.',
       'El resultado son piezas elegantes, atemporales y funcionales, que se convierten en el centro visual de cualquier espacio.'
     ],
-    images: ['/test.jpg', '/test.jpg', '/test.jpg']
+    images: ['/designers/pieter-adams/showcase-1.png', '/designers/pieter-adams/showcase-2.png', '/designers/pieter-adams/showcase-3.png']
   },
   {
     id: 'arte-brotto',
@@ -54,7 +54,7 @@ export const designers: Designer[] = [
       'La marca se distingue por el uso exclusivo de maderas macizas nobles, como el nogal canaletto y el roble europeo, seleccionadas de bosques gestionados de forma sostenible. Estas maderas son tratadas con técnicas que respetan su naturaleza y envejecen con belleza, revelando vetas únicas y una calidez inigualable.',
       'Sus colecciones celebran el vínculo entre arte, diseño y naturaleza, ofreciendo muebles atemporales que elevan cualquier espacio con carácter, autenticidad y alma.'
     ],
-    images: ['/test.jpg', '/test.jpg', '/test.jpg']
+    images: ['/designers/arte-brotto/showcase-1.png', '/designers/arte-brotto/showcase-2.png', '/designers/arte-brotto/showcase-3.png']
   }
 ];
 
