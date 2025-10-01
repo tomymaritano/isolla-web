@@ -6,8 +6,7 @@ import { useState } from 'react';
 
 export default function ContactoPage() {
   const [formData, setFormData] = useState({
-    nombre: '',
-    apellido: '',
+    nombreCompleto: '',
     email: '',
     telefono: '',
     pais: '',
@@ -47,75 +46,102 @@ export default function ContactoPage() {
           {/* Right Column - Form */}
           <div>
             <form onSubmit={handleSubmit} className="space-y-8">
-              {/* Primera fila: Nombre, Apellido, Email */}
-              <div className="grid grid-cols-3 gap-4">
-                <input
-                  type="text"
-                  name="nombre"
-                  placeholder="Nombre"
-                  value={formData.nombre}
-                  onChange={handleChange}
-                  className="border font-inter text-[16px] focus:outline-none focus:border-gray-400 transition px-4 py-3"
-                  style={{
-                    borderColor: '#E8E8E8',
-                    backgroundColor: '#F8F8F8',
-                    color: 'rgba(6, 39, 44, 0.6)'
-                  }}
-                  required
-                />
-                <input
-                  type="text"
-                  name="apellido"
-                  placeholder="Apellido"
-                  value={formData.apellido}
-                  onChange={handleChange}
-                  className="border font-inter text-[16px] focus:outline-none focus:border-gray-400 transition px-4 py-3"
-                  style={{
-                    borderColor: '#E8E8E8',
-                    backgroundColor: '#F8F8F8',
-                    color: 'rgba(6, 39, 44, 0.6)'
-                  }}
-                  required
-                />
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="border font-inter text-[16px] focus:outline-none focus:border-gray-400 transition px-4 py-3"
-                  style={{
-                    borderColor: '#E8E8E8',
-                    backgroundColor: '#F8F8F8',
-                    color: 'rgba(6, 39, 44, 0.6)'
-                  }}
-                  required
-                />
+              {/* Primera fila: Nombre y Apellido, Email */}
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <label className="block font-inter text-[14px] mb-2" style={{ color: '#06272C' }}>
+                    Nombre y apellido
+                  </label>
+                  <input
+                    type="text"
+                    name="nombreCompleto"
+                    placeholder="Nombre y apellido"
+                    value={formData.nombreCompleto}
+                    onChange={handleChange}
+                    className="w-full border font-inter text-[16px] focus:outline-none focus:border-gray-400 transition px-4 py-3"
+                    style={{
+                      borderColor: '#E8E8E8',
+                      backgroundColor: '#F8F8F8',
+                      color: 'rgba(6, 39, 44, 0.6)'
+                    }}
+                    required
+                  />
+                </div>
+                <div>
+                  <label className="block font-inter text-[14px] mb-2" style={{ color: '#06272C' }}>
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="w-full border font-inter text-[16px] focus:outline-none focus:border-gray-400 transition px-4 py-3"
+                    style={{
+                      borderColor: '#E8E8E8',
+                      backgroundColor: '#F8F8F8',
+                      color: 'rgba(6, 39, 44, 0.6)'
+                    }}
+                    required
+                  />
+                </div>
               </div>
 
               {/* Segunda fila: Teléfono, País */}
               <div className="grid grid-cols-2 gap-4">
-                <input
-                  type="tel"
-                  name="telefono"
-                  placeholder="Teléfono"
-                  value={formData.telefono}
+                <div>
+                  <label className="block font-inter text-[14px] mb-2" style={{ color: '#06272C' }}>
+                    Teléfono
+                  </label>
+                  <input
+                    type="tel"
+                    name="telefono"
+                    placeholder="Teléfono"
+                    value={formData.telefono}
+                    onChange={handleChange}
+                    className="w-full border font-inter text-[16px] focus:outline-none focus:border-gray-400 transition px-4 py-3"
+                    style={{
+                      borderColor: '#E8E8E8',
+                      backgroundColor: '#F8F8F8',
+                      color: 'rgba(6, 39, 44, 0.6)'
+                    }}
+                    required
+                  />
+                </div>
+                <div>
+                  <label className="block font-inter text-[14px] mb-2" style={{ color: '#06272C' }}>
+                    País
+                  </label>
+                  <input
+                    type="text"
+                    name="pais"
+                    placeholder="País"
+                    value={formData.pais}
+                    onChange={handleChange}
+                    className="w-full border font-inter text-[16px] focus:outline-none focus:border-gray-400 transition px-4 py-3"
+                    style={{
+                      borderColor: '#E8E8E8',
+                      backgroundColor: '#F8F8F8',
+                      color: 'rgba(6, 39, 44, 0.6)'
+                    }}
+                    required
+                  />
+                </div>
+              </div>
+
+              {/* Tercera fila: Consulta */}
+              <div>
+                <label className="block font-inter text-[14px] mb-2" style={{ color: '#06272C' }}>
+                  Dejanos tu consulta
+                </label>
+                <textarea
+                  name="consulta"
+                  placeholder="Dejanos tu consulta"
+                  value={formData.consulta}
                   onChange={handleChange}
-                  className="border font-inter text-[16px] focus:outline-none focus:border-gray-400 transition px-4 py-3"
-                  style={{
-                    borderColor: '#E8E8E8',
-                    backgroundColor: '#F8F8F8',
-                    color: 'rgba(6, 39, 44, 0.6)'
-                  }}
-                  required
-                />
-                <input
-                  type="text"
-                  name="pais"
-                  placeholder="País"
-                  value={formData.pais}
-                  onChange={handleChange}
-                  className="border font-inter text-[16px] focus:outline-none focus:border-gray-400 transition px-4 py-3"
+                  rows={4}
+                  className="w-full border font-inter text-[16px] focus:outline-none focus:border-gray-400 transition resize-none px-4 py-3"
                   style={{
                     borderColor: '#E8E8E8',
                     backgroundColor: '#F8F8F8',
@@ -124,22 +150,6 @@ export default function ContactoPage() {
                   required
                 />
               </div>
-
-              {/* Tercera fila: Consulta */}
-              <textarea
-                name="consulta"
-                placeholder="Dejanos tu consulta"
-                value={formData.consulta}
-                onChange={handleChange}
-                rows={4}
-                className="w-full border font-inter text-[16px] focus:outline-none focus:border-gray-400 transition resize-none px-4 py-3"
-                style={{
-                  borderColor: '#E8E8E8',
-                  backgroundColor: '#F8F8F8',
-                  color: 'rgba(6, 39, 44, 0.6)'
-                }}
-                required
-              />
 
               <button
                 type="submit"
