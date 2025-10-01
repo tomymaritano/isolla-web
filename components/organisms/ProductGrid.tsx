@@ -5,9 +5,9 @@ import Button from '@/components/atoms/Button';
 import { products } from '@/lib/data/products';
 
 export default function ProductGrid() {
-  // Show only specific products on homepage: Bombo 02, Caballito piccolo, Coffe Table, Caballito petit
+  // Show only specific products on homepage in this exact order: Bombo 02, Caballito piccolo, Coffe Table, Caballito petit
   const featuredProductIds = [6, 2, 9, 1]; // Bombo 02, Caballito piccolo, Coffe Table, Caballito petit
-  const featuredProducts = products.filter(p => featuredProductIds.includes(p.id));
+  const featuredProducts = featuredProductIds.map(id => products.find(p => p.id === id)).filter(Boolean);
 
   return (
     <Section>
