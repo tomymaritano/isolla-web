@@ -13,7 +13,7 @@ export default function DesignSpaceSection() {
               src="/sections/design-space.png"
               alt="Espacio de diseño de mobiliario contemporáneo"
               fill
-              className="object-cover"
+              className="object-contain"
             />
           </div>
           <div className="flex items-center justify-center">
