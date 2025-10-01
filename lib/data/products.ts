@@ -231,6 +231,91 @@ export const products: Product[] = [
       ],
       colors: 'Colores según gama disponible.'
     }
+  },
+  {
+    id: 10,
+    category: 'Mesas',
+    title: 'Rectangular Coffe Table',
+    price: 'Desde: $3.623,49 USD',
+    image: '/products/rectangular-coffee-table-small/main.png',
+    designerId: 'pieter-adam',
+    description: 'Diseño de Pieter Adam, la mesa cuadrada de la colección Collec(t)able se integra con naturalidad a cualquier espacio. Su tapa, realizada en materiales ecológicos, revela un patrón geométrico que aporta carácter y elegancia atemporal.',
+    information: 'La serie Collect(t)able de Pieter Adam celebra un diseño sofisticado que irradia elegancia y distinción. Mesas rectangulares y redondas dialogan con tapas realizadas en materiales sostenibles —bambú, selenita y marquetería de paja— que revelan un refinado lenguaje geométrico.',
+    specifications: {
+      dimensions: 'D90 × 60 × H25 cm',
+      materials: [
+        'Hierro, Paja y Vidrio'
+      ],
+      colors: 'Colores según gama disponible.'
+    }
+  },
+  {
+    id: 11,
+    category: 'Mesas',
+    title: 'Side Table',
+    price: 'Desde: $3.310,49 USD',
+    image: '/products/side-table/main.png',
+    designerId: 'pieter-adam',
+    description: 'Diseño de Pieter Adam, la mesa de arrime circular de la colección Collec(t)able se integra con naturalidad a cualquier espacio. Su tapa, realizada en materiales ecológicos, revela un patrón geométrico que aporta carácter y elegancia atemporal.',
+    information: 'La serie Collect(t)able de Pieter Adam celebra un diseño sofisticado que irradia elegancia y distinción. Mesas rectangulares y redondas dialogan con tapas realizadas en materiales sostenibles —bambú, selenita y marquetería de paja— que revelan un refinado lenguaje geométrico.',
+    specifications: {
+      dimensions: 'D60 × H60 cm',
+      materials: [
+        'Hierro, Paja y Selenita'
+      ],
+      colors: 'Colores según gama disponible.'
+    }
+  },
+  {
+    id: 12,
+    category: 'Mesas',
+    title: 'Tall Side Table',
+    price: 'Desde: $2.528,00 USD',
+    image: '/products/tall-side-table/main.png',
+    designerId: 'pieter-adam',
+    description: 'Diseño de Pieter Adam, la mesa de arrime circular de la colección Collec(t)able se integra con naturalidad a cualquier espacio. Su tapa, realizada en materiales ecológicos, revela un patrón geométrico que aporta carácter y elegancia atemporal.',
+    information: 'La serie Collect(t)able de Pieter Adam celebra un diseño sofisticado que irradia elegancia y distinción. Mesas rectangulares y redondas dialogan con tapas realizadas en materiales sostenibles —bambú, selenita y marquetería de paja— que revelan un refinado lenguaje geométrico.',
+    specifications: {
+      dimensions: 'D35 × H120 cm',
+      materials: [
+        'Hierro, bamboo y paja'
+      ],
+      colors: 'Colores según gama disponible.'
+    }
+  },
+  {
+    id: 13,
+    category: 'Mesas',
+    title: 'Rectangular Coffe Table',
+    price: 'Desde: $4.921,72 USD',
+    image: '/products/rectangular-coffee-table-large/main.png',
+    designerId: 'pieter-adam',
+    description: 'Diseño de Pieter Adam, la mesa cuadrada de la colección Collec(t)able se integra con naturalidad a cualquier espacio. Su tapa, realizada en materiales ecológicos, revela un patrón geométrico que aporta carácter y elegancia atemporal.',
+    information: 'La serie Collec(t)able de Pieter Adam celebra un diseño sofisticado que irradia elegancia y distinción. Mesas rectangulares y redondas dialogan con tapas realizadas en materiales sostenibles —bambú, selenita y marquetería de paja— que revelan un refinado lenguaje geométrico.',
+    specifications: {
+      dimensions: 'D130 × 90 × H35 cm',
+      materials: [
+        'Hierro, Paja y Vidrio'
+      ],
+      colors: 'Colores según gama disponible.'
+    }
+  },
+  {
+    id: 14,
+    category: 'Mesas',
+    title: 'Mesa Leonardo',
+    price: 'Precio: Consultar',
+    image: '/products/mesa-leonardo/main.png',
+    designerId: 'arte-brotto',
+    description: 'La mesa de apoyo Leonardo logra un perfecto equilibrio entre elegancia y originalidad gracias a la combinación de madera de nogal americano con mármol y cerámica en varios tonos y posibilidades.',
+    information: 'Colorsense by Arte Brotto & Foglie d\'Oro. Artebrotto & Foglie d\'Oro presentan Colorsense, una propuesta única de nueve tonalidades exclusivas diseñadas para transformar la madera de nogal americano en piezas de diseño contemporáneo. En esta colección, la mesa de apoyo Leonardo se convierte en la protagonista, logrando un perfecto equilibrio entre elegancia y originalidad gracias a la combinación de madera de nogal americano con mármol y cerámica en varios tonos y posibilidades.',
+    specifications: {
+      dimensions: '060 × 040',
+      materials: [
+        'Nogal macizo con patas en metal y tablero en madera o mármol'
+      ],
+      colors: 'Colores según gama disponible.'
+    }
   }
 ];
 
