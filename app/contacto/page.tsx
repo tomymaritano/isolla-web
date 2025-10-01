@@ -49,7 +49,7 @@ export default function ContactoPage() {
               {/* Primera fila: Nombre y Apellido, Email */}
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="block font-crimson text-[14px] mb-2" style={{ color: '#06272C' }}>
+                  <label className="block font-crimson text-[20px] mb-2" style={{ color: '#06272C' }}>
                     Nombre y apellido
                   </label>
                   <input
@@ -68,7 +68,7 @@ export default function ContactoPage() {
                   />
                 </div>
                 <div>
-                  <label className="block font-crimson text-[14px] mb-2" style={{ color: '#06272C' }}>
+                  <label className="block font-crimson text-[20px] mb-2" style={{ color: '#06272C' }}>
                     Email
                   </label>
                   <input
@@ -91,7 +91,7 @@ export default function ContactoPage() {
               {/* Segunda fila: Teléfono, País */}
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="block font-crimson text-[14px] mb-2" style={{ color: '#06272C' }}>
+                  <label className="block font-crimson text-[20px] mb-2" style={{ color: '#06272C' }}>
                     Teléfono
                   </label>
                   <input
@@ -110,7 +110,7 @@ export default function ContactoPage() {
                   />
                 </div>
                 <div>
-                  <label className="block font-crimson text-[14px] mb-2" style={{ color: '#06272C' }}>
+                  <label className="block font-crimson text-[20px] mb-2" style={{ color: '#06272C' }}>
                     País
                   </label>
                   <input
@@ -132,7 +132,7 @@ export default function ContactoPage() {
 
               {/* Tercera fila: Consulta */}
               <div>
-                <label className="block font-crimson text-[14px] mb-2" style={{ color: '#06272C' }}>
+                <label className="block font-crimson text-[20px] mb-2" style={{ color: '#06272C' }}>
                   Dejanos tu consulta
                 </label>
                 <textarea
