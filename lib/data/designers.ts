@@ -9,19 +9,19 @@ export const designers: Designer[] = [
   {
     id: 1,
     name: 'Oscar Maschera',
-    image: '/placeholder.jpg',
+    image: '/designers/oscar-maschera/profile.png',
     href: '/productos',
   },
   {
     id: 2,
     name: 'Arte Brotto',
-    image: '/placeholder.jpg',
+    image: '/designers/arte-brotto/profile.png',
     href: '/productos',
   },
   {
     id: 3,
     name: 'Pieter Adams',
-    image: '/placeholder.jpg',
+    image: '/designers/pieter-adams/profile.png',
     href: '/productos',
   },
 ];
