@@ -3,6 +3,7 @@
 import ProductCard from '@/components/molecules/ProductCard';
 import { products } from '@/lib/data/products';
 import { useState } from 'react';
+import Link from 'next/link';
 
 export default function ContactoPage() {
   const [formData, setFormData] = useState({
@@ -38,9 +39,15 @@ export default function ContactoPage() {
             <p className="font-crimson mb-16" style={{ fontSize: '24px', lineHeight: '30px', letterSpacing: '-0.3px' }}>
               Escribinos para conocer nuestras novedades, coordinar una visita al showroom o explorar nuevas colaboraciones
             </p>
-            <p className="font-inter" style={{ fontSize: '20px' }}>
+            <Link
+              href="https://www.instagram.com/isollafurniture"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-inter hover:opacity-70 transition"
+              style={{ fontSize: '20px' }}
+            >
               Instagram | @isollafurniture
-            </p>
+            </Link>
           </div>
 
           {/* Right Column - Form */}
