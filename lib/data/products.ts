@@ -218,7 +218,7 @@ export const products: Product[] = [
   {
     id: 9,
     category: 'Mesas',
-    title: 'Coffe Table',
+    title: 'Coffee Table',
     price: 'Desde: $4.921,72 USD',
     image: '/products/coffee-table/main.png',
     designerId: 'pieter-adam',
@@ -235,7 +235,7 @@ export const products: Product[] = [
   {
     id: 10,
     category: 'Mesas',
-    title: 'Rectangular Coffe Table',
+    title: 'Rectangular Coffee Table',
     price: 'Desde: $3.623,49 USD',
     image: '/products/rectangular-coffee-table-small/main.png',
     designerId: 'pieter-adam',
@@ -286,7 +286,7 @@ export const products: Product[] = [
   {
     id: 13,
     category: 'Mesas',
-    title: 'Rectangular Coffe Table',
+    title: 'Rectangular Coffee Table',
     price: 'Desde: $4.921,72 USD',
     image: '/products/rectangular-coffee-table-large/main.png',
     designerId: 'pieter-adam',

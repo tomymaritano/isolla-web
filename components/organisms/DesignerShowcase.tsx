@@ -12,6 +12,7 @@ interface DesignerShowcaseProps {
   imageSrc: string | string[];
   imageAlt: string;
   imageOnLeft?: boolean;
+  textMaxWidth?: string;
 }
 
 export default function DesignerShowcase({
@@ -20,6 +21,7 @@ export default function DesignerShowcase({
   imageSrc,
   imageAlt,
   imageOnLeft = false,
+  textMaxWidth,
 }: DesignerShowcaseProps) {
   const isMultipleImages = Array.isArray(imageSrc);
   const { ref: textRef, isVisible: textVisible } = useScrollAnimation();
@@ -28,7 +30,7 @@ export default function DesignerShowcase({
   const renderImages = () => {
     if (isMultipleImages && imageSrc.length === 3) {
       return (
-        <div ref={imageRef} className={`w-full lg:w-[1300px] flex flex-col gap-4 transition-all duration-700 ${imageVisible ? 'animate-scale-in' : 'opacity-0'}`}>
+        <div ref={imageRef} className={`w-full flex flex-col gap-4 transition-all duration-700 ${imageVisible ? 'animate-scale-in' : 'opacity-0'}`}>
           <div className="relative w-full h-[400px] md:h-[600px] lg:h-[758px] bg-gray-200 overflow-hidden">
             <Image
               src={imageSrc[0]}
@@ -60,7 +62,7 @@ export default function DesignerShowcase({
     }
 
     return (
-      <div ref={imageRef} className={`relative w-full h-[400px] md:h-[600px] lg:w-[1300px] lg:h-[1056px] bg-gray-200 overflow-hidden transition-all duration-700 ${imageVisible ? 'animate-scale-in' : 'opacity-0'}`}>
+      <div ref={imageRef} className={`relative w-full h-[400px] md:h-[600px] bg-gray-200 overflow-hidden transition-all duration-700 ${imageVisible ? 'animate-scale-in' : 'opacity-0'}`}>
         <Image
           src={imageSrc as string}
           alt={imageAlt}
@@ -74,9 +76,9 @@ export default function DesignerShowcase({
   return (
     <Section>
       <Container>
-        <div className={`grid grid-cols-1 lg:grid-cols-[1fr_1300px] gap-8 items-start ${imageOnLeft ? 'lg:grid-cols-[1300px_1fr]' : ''}`}>
+        <div className={`grid grid-cols-1 ${imageOnLeft ? 'lg:grid-cols-[3fr_1fr]' : 'lg:grid-cols-[1fr_3fr]'} gap-8 items-start`}>
           {imageOnLeft && renderImages()}
-          <div ref={textRef} className={`px-4 transition-all duration-700 ${textVisible ? 'animate-slide-up' : 'opacity-0'}`}>
+          <div ref={textRef} className={`${textMaxWidth || ''} mx-auto transition-all duration-700 ${textVisible ? 'animate-slide-up' : 'opacity-0'}`}>
             <h2 className="font-bricolage mb-8 text-[28px] md:text-[40px]" style={{ lineHeight: '44px', letterSpacing: '-1.3px' }}>
               {title}
             </h2>
