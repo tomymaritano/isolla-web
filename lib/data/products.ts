@@ -11,7 +11,8 @@ export interface Product {
   category: string;
   title: string;
   price: string;
-  image: string;
+  image: string; // Main image (first in images array for backward compatibility)
+  images?: string[]; // Gallery images
   description?: string;
   designerId: string; // Reference to designer
   information?: string;
@@ -66,6 +67,7 @@ export const products: Product[] = [
     title: 'Caballito petit',
     price: 'Desde: $2.699,95 USD',
     image: '/products/caballito-petit/main.png',
+    images: ['/products/caballito-petit/main.png', '/products/caballito-petit/1.png'],
     designerId: 'oscar-maschera',
     description: 'Caballito Blanco se inspira en la icónica silla de montar de un caballo blanco, símbolo de la historia argentina. Un homenaje a la tradición y a su gente.',
     information: 'La inspiración de Néstor Perkal cabalga en la silla de montar de un caballo blanco: un juguete que vio de niño en la vidriera de un comercio del barrio y que también es símbolo de la historia de su gente. Los argentinos que cruzaron su país en busca de un hogar, comida y familia, viajaban a caballo. Y la silla de montar del Caballito Blanco es un lugar, cuidado, apoyo, amistad y descanso, todo al mismo tiempo. "Ven rápido, caballito blanco, llévame a la tierra donde nací... Tengo, tengo, tengo..." Una canción perteneciente a la Tradición Oral (1930–1936) del pueblo rural argentino. Bancos de malla de acero con asiento tapizado en cuero, cuero y tela, cuero y ante.',
@@ -85,6 +87,7 @@ export const products: Product[] = [
     title: 'Caballito piccolo',
     price: 'Desde: $3.336,55 USD',
     image: '/products/caballito-piccolo/main.png',
+    images: ['/products/caballito-piccolo/main.png', '/products/caballito-piccolo/1.png', '/products/caballito-piccolo/2.png', '/products/caballito-piccolo/3.png', '/products/caballito-piccolo/4.png', '/products/caballito-piccolo/5.png', '/products/caballito-piccolo/6.png'],
     designerId: 'oscar-maschera',
     description: 'Caballito Blanco se inspira en la icónica silla de montar de un caballo blanco, símbolo de la historia argentina. Un homenaje a la tradición y a su gente.',
     information: 'La inspiración de Néstor Perkal cabalga en la silla de montar de un caballo blanco: un juguete que vio de niño en la vidriera de un comercio del barrio y que también es símbolo de la historia de su gente. Los argentinos que cruzaron su país en busca de un hogar, comida y familia, viajaban a caballo. Y la silla de montar del Caballito Blanco es un lugar, cuidado, apoyo, amistad y descanso, todo al mismo tiempo. "Ven rápido, caballito blanco, llévame a la tierra donde nací... Tengo, tengo, tengo..." Una canción perteneciente a la Tradición Oral (1930–1936) del pueblo rural argentino. Bancos de malla de acero con asiento tapizado en cuero, cuero y tela, cuero y ante.',
@@ -104,6 +107,7 @@ export const products: Product[] = [
     title: 'Caballito Lungo',
     price: 'Desde: $5.151,40 USD',
     image: '/products/caballito-lungo/main.png',
+    images: ['/products/caballito-lungo/main.png', '/products/caballito-lungo/1.png', '/products/caballito-lungo/2.png', '/products/caballito-lungo/3.png'],
     designerId: 'oscar-maschera',
     description: 'Caballito Blanco se inspira en la icónica silla de montar de un caballo blanco, símbolo de la historia argentina. Un homenaje a la tradición y a su gente.',
     information: 'La inspiración de Néstor Perkal cabalga en la silla de montar de un caballo blanco: un juguete que vio de niño en la vidriera de un comercio del barrio y que también es símbolo de la historia de su gente. Los argentinos que cruzaron su país en busca de un hogar, comida y familia, viajaban a caballo. Y la silla de montar del Caballito Blanco es un lugar, cuidado, apoyo, amistad y descanso, todo al mismo tiempo. "Ven rápido, caballito blanco, llévame a la tierra donde nací... Tengo, tengo, tengo..." Una canción perteneciente a la Tradición Oral (1930–1936) del pueblo rural argentino. Bancos de malla de acero con asiento tapizado en cuero, cuero y tela, cuero y ante.',
@@ -123,6 +127,7 @@ export const products: Product[] = [
     title: 'Caballito Grande',
     price: 'Desde: $5.151,40 USD',
     image: '/products/caballito-grande/main.png',
+    images: ['/products/caballito-grande/main.png', '/products/caballito-grande/1.png', '/products/caballito-grande/2.png'],
     designerId: 'oscar-maschera',
     description: 'Caballito Blanco se inspira en la icónica silla de montar de un caballo blanco, símbolo de la historia argentina. Un homenaje a la tradición y a su gente.',
     information: 'La inspiración de Néstor Perkal cabalga en la silla de montar de un caballo blanco: un juguete que vio de niño en la vidriera de un comercio del barrio y que también es símbolo de la historia de su gente. Los argentinos que cruzaron su país en busca de un hogar, comida y familia, viajaban a caballo. Y la silla de montar del Caballito Blanco es un lugar, cuidado, apoyo, amistad y descanso, todo al mismo tiempo. "Ven rápido, caballito blanco, llévame a la tierra donde nací... Tengo, tengo, tengo..." Una canción perteneciente a la Tradición Oral (1930–1936) del pueblo rural argentino. Bancos de malla de acero con asiento tapizado en cuero, cuero y tela, cuero y ante.',
@@ -143,6 +148,7 @@ export const products: Product[] = [
     title: 'Bombo 01',
     price: 'Desde: $3.322,58 USD',
     image: '/products/bombo-01/main.png',
+    images: ['/products/bombo-01/main.png', '/products/bombo-01/1.png', '/products/bombo-01/2.png'],
     designerId: 'oscar-maschera',
     description: 'Para la colección Bombo, Nestor Perkal se inspiró en el espíritu auténtico de Argentina. Su nombre resuena como el vibrante latido de un tambor.',
     information: 'Diseñado por Néstor Perkal, resuena como el latido de un tambor argentino. Como jarras invertidas, estas piezas representan el encuentro exitoso entre el cuero y la cerámica de gres, gracias a la excelencia del saber hacer transalpino. Es una colección de objetos que permiten múltiples usos: mesa de centro, mesa de noche, mesa para el té o taburete. Con sus formas reconfortantes y sus colores delicados —tierra, azul cielo, terracota—, Bombo se adapta perfectamente a cualquier decoración.',
@@ -163,6 +169,7 @@ export const products: Product[] = [
     title: 'Bombo 02',
     price: 'Desde: $2.624,56 USD',
     image: '/products/bombo-02/main.png',
+    images: ['/products/bombo-02/main.png', '/products/bombo-02/1.png', '/products/bombo-02/2.png', '/products/bombo-02/3.png', '/products/bombo-02/4.png'],
     designerId: 'oscar-maschera',
     description: 'Para la colección Bombo, Nestor Perkal se inspiró en el espíritu auténtico de Argentina. Su nombre resuena como el vibrante latido de un tambor.',
     information: 'Diseñado por Néstor Perkal, resuena como el latido de un tambor argentino. Como jarras invertidas, estas piezas representan el encuentro exitoso entre el cuero y la cerámica de gres, gracias a la excelencia del saber hacer transalpino. Es una colección de objetos que permiten múltiples usos: mesa de centro, mesa de noche, mesa para el té o taburete. Con sus formas reconfortantes y sus colores delicados —tierra, azul cielo, terracota—, Bombo se adapta perfectamente a cualquier decoración.',
@@ -183,6 +190,7 @@ export const products: Product[] = [
     title: 'Bombo 03',
     price: 'Desde: $3.699,52 USD',
     image: '/products/bombo-03/main.png',
+    images: ['/products/bombo-03/main.png', '/products/bombo-03/1.png', '/products/bombo-03/2.png', '/products/bombo-03/3.png'],
     designerId: 'oscar-maschera',
     description: 'Para la colección Bombo, Nestor Perkal se inspiró en el espíritu auténtico de Argentina. Su nombre resuena como el vibrante latido de un tambor.',
     information: 'Diseñado por Néstor Perkal, resuena como el latido de un tambor argentino. Como jarras invertidas, estas piezas representan el encuentro exitoso entre el cuero y la cerámica de gres, gracias a la excelencia del saber hacer transalpino. Es una colección de objetos que permiten múltiples usos: mesa de centro, mesa de noche, mesa para el té o taburete. Con sus formas reconfortantes y sus colores delicados —tierra, azul cielo, terracota—, Bombo se adapta perfectamente a cualquier decoración.',
@@ -204,6 +212,7 @@ export const products: Product[] = [
     title: 'Coffee Table Tall',
     price: 'Desde: $3.897,36 USD',
     image: '/products/coffee-table-tall/main.png',
+    images: ['/products/coffee-table-tall/main.png', '/products/coffee-table-tall/1.png', '/products/coffee-table-tall/2.png', '/products/coffee-table-tall/3.png', '/products/coffee-table-tall/4.png', '/products/coffee-table-tall/5.png'],
     designerId: 'pieter-adam',
     description: 'Diseño de Pieter Adam, la mesa redonda de la colección Collect(t)able se integra con naturalidad a cualquier espacio. Su tapa, realizada en materiales ecológicos, revela un patrón geométrico que aporta carácter y elegancia atemporal.',
     information: 'La serie Collect(t)able de Pieter Adam celebra un diseño sofisticado que irradia elegancia y distinción. Mesas rectangulares y redondas dialogan con tapas realizadas en materiales sostenibles —bambú, selenita y marquetería de paja— que revelan un refinado lenguaje geométrico.',
@@ -221,6 +230,7 @@ export const products: Product[] = [
     title: 'Coffee Table',
     price: 'Desde: $4.921,72 USD',
     image: '/products/coffee-table/main.png',
+    images: ['/products/coffee-table/main.png', '/products/coffee-table/1.png', '/products/coffee-table/2.png', '/products/coffee-table/3.png', '/products/coffee-table/4.png'],
     designerId: 'pieter-adam',
     description: 'Diseño de Pieter Adam, la mesa redonda de la colección Collect(t)able se integra con naturalidad a cualquier espacio. Su tapa, realizada en materiales ecológicos, revela un patrón geométrico que aporta carácter y elegancia atemporal.',
     information: 'La serie Collect(t)able de Pieter Adam celebra un diseño sofisticado que irradia elegancia y distinción. Mesas rectangulares y redondas dialogan con tapas realizadas en materiales sostenibles —bambú, selenita y marquetería de paja— que revelan un refinado lenguaje geométrico.',
@@ -238,6 +248,7 @@ export const products: Product[] = [
     title: 'Rectangular Coffee Table',
     price: 'Desde: $3.623,49 USD',
     image: '/products/rectangular-coffee-table-small/main.png',
+    images: ['/products/rectangular-coffee-table-small/main.png', '/products/rectangular-coffee-table-small/1.png', '/products/rectangular-coffee-table-small/2.png', '/products/rectangular-coffee-table-small/3.png'],
     designerId: 'pieter-adam',
     description: 'Diseño de Pieter Adam, la mesa cuadrada de la colección Collec(t)able se integra con naturalidad a cualquier espacio. Su tapa, realizada en materiales ecológicos, revela un patrón geométrico que aporta carácter y elegancia atemporal.',
     information: 'La serie Collect(t)able de Pieter Adam celebra un diseño sofisticado que irradia elegancia y distinción. Mesas rectangulares y redondas dialogan con tapas realizadas en materiales sostenibles —bambú, selenita y marquetería de paja— que revelan un refinado lenguaje geométrico.',
@@ -255,6 +266,7 @@ export const products: Product[] = [
     title: 'Side Table',
     price: 'Desde: $3.310,49 USD',
     image: '/products/side-table/main.png',
+    images: ['/products/side-table/main.png', '/products/side-table/1.png', '/products/side-table/2.png', '/products/side-table/3.png'],
     designerId: 'pieter-adam',
     description: 'Diseño de Pieter Adam, la mesa de arrime circular de la colección Collec(t)able se integra con naturalidad a cualquier espacio. Su tapa, realizada en materiales ecológicos, revela un patrón geométrico que aporta carácter y elegancia atemporal.',
     information: 'La serie Collect(t)able de Pieter Adam celebra un diseño sofisticado que irradia elegancia y distinción. Mesas rectangulares y redondas dialogan con tapas realizadas en materiales sostenibles —bambú, selenita y marquetería de paja— que revelan un refinado lenguaje geométrico.',
@@ -272,6 +284,7 @@ export const products: Product[] = [
     title: 'Tall Side Table',
     price: 'Desde: $2.528,00 USD',
     image: '/products/tall-side-table/main.png',
+    images: ['/products/tall-side-table/main.png', '/products/tall-side-table/1.png', '/products/tall-side-table/2.png', '/products/tall-side-table/3.png', '/products/tall-side-table/4.png'],
     designerId: 'pieter-adam',
     description: 'Diseño de Pieter Adam, la mesa de arrime circular de la colección Collec(t)able se integra con naturalidad a cualquier espacio. Su tapa, realizada en materiales ecológicos, revela un patrón geométrico que aporta carácter y elegancia atemporal.',
     information: 'La serie Collect(t)able de Pieter Adam celebra un diseño sofisticado que irradia elegancia y distinción. Mesas rectangulares y redondas dialogan con tapas realizadas en materiales sostenibles —bambú, selenita y marquetería de paja— que revelan un refinado lenguaje geométrico.',
@@ -289,6 +302,7 @@ export const products: Product[] = [
     title: 'Rectangular Coffee Table',
     price: 'Desde: $4.921,72 USD',
     image: '/products/rectangular-coffee-table-large/main.png',
+    images: ['/products/rectangular-coffee-table-large/main.png', '/products/rectangular-coffee-table-large/1.png', '/products/rectangular-coffee-table-large/2.png', '/products/rectangular-coffee-table-large/3.png'],
     designerId: 'pieter-adam',
     description: 'Diseño de Pieter Adam, la mesa cuadrada de la colección Collec(t)able se integra con naturalidad a cualquier espacio. Su tapa, realizada en materiales ecológicos, revela un patrón geométrico que aporta carácter y elegancia atemporal.',
     information: 'La serie Collec(t)able de Pieter Adam celebra un diseño sofisticado que irradia elegancia y distinción. Mesas rectangulares y redondas dialogan con tapas realizadas en materiales sostenibles —bambú, selenita y marquetería de paja— que revelan un refinado lenguaje geométrico.',
@@ -306,6 +320,7 @@ export const products: Product[] = [
     title: 'Mesa Leonardo',
     price: 'Precio: Consultar',
     image: '/products/mesa-leonardo/main.png',
+    images: ['/products/mesa-leonardo/main.png', '/products/mesa-leonardo/1.png', '/products/mesa-leonardo/2.png', '/products/mesa-leonardo/3.png', '/products/mesa-leonardo/4.png', '/products/mesa-leonardo/5.png', '/products/mesa-leonardo/6.png', '/products/mesa-leonardo/7.png', '/products/mesa-leonardo/8.png'],
     designerId: 'arte-brotto',
     description: 'La mesa de apoyo Leonardo logra un perfecto equilibrio entre elegancia y originalidad gracias a la combinación de madera de nogal americano con mármol y cerámica en varios tonos y posibilidades.',
     information: 'Colorsense by Arte Brotto & Foglie d\'Oro. Artebrotto & Foglie d\'Oro presentan Colorsense, una propuesta única de nueve tonalidades exclusivas diseñadas para transformar la madera de nogal americano en piezas de diseño contemporáneo. En esta colección, la mesa de apoyo Leonardo se convierte en la protagonista, logrando un perfecto equilibrio entre elegancia y originalidad gracias a la combinación de madera de nogal americano con mármol y cerámica en varios tonos y posibilidades.',

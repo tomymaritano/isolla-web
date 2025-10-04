@@ -1,6 +1,6 @@
-import Image from 'next/image';
 import Typography from '@/components/atoms/Typography';
 import ProductCard from '@/components/molecules/ProductCard';
+import ProductImageGallery from '@/components/molecules/ProductImageGallery';
 import { products } from '@/lib/data/products';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
@@ -56,16 +56,11 @@ export default async function ProductoPage({
     <div className="min-h-screen">
       <div className="grid grid-cols-1 lg:grid-cols-2">
         {/* Image Section - Half Screen */}
-        <div className="relative h-[400px] md:h-[600px] lg:h-[1093px] px-4 md:px-10">
-          <div className="relative h-full">
-            <Image
-              src={product.image}
-              alt={product.title}
-              fill
-              className="object-cover"
-              priority
-            />
-          </div>
+        <div className="relative h-[60vh] md:h-[70vh] lg:h-[calc(100vh-120px)] px-4 md:px-10">
+          <ProductImageGallery
+            images={product.images || [product.image]}
+            productName={product.title}
+          />
         </div>
 
         {/* Content Section */}
