@@ -52,13 +52,18 @@ export default async function ProductoPage({
     notFound();
   }
 
+  // Show additional images (excluding main thumbnail) if available, otherwise show main image
+  const displayImages = product.images && product.images.length > 1
+    ? product.images.slice(1) // Skip first image (main thumbnail shown in product lists)
+    : [product.image]; // Show main image if no additional images
+
   return (
     <div className="min-h-screen">
       <div className="grid grid-cols-1 lg:grid-cols-2">
         {/* Image Section - Half Screen */}
         <div className="relative h-[60vh] md:h-[70vh] lg:h-[calc(100vh-120px)] px-4 md:px-10">
           <ProductImageGallery
-            images={product.images || [product.image]}
+            images={displayImages}
             productName={product.title}
           />
         </div>
