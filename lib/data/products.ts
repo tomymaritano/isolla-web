@@ -266,7 +266,7 @@ export const products: Product[] = [
     title: 'Side Table',
     price: 'Desde: $3.310,49 USD',
     image: '/products/side-table/main.png',
-    images: ['/products/side-table/main.png', '/products/side-table/1.png', '/products/side-table/2.png', '/products/side-table/3.png'],
+    images: ['/products/side-table/main.png', '/products/side-table/1.png', '/products/side-table/2.png'],
     designerId: 'pieter-adam',
     description: 'Diseño de Pieter Adam, la mesa de arrime circular de la colección Collec(t)able se integra con naturalidad a cualquier espacio. Su tapa, realizada en materiales ecológicos, revela un patrón geométrico que aporta carácter y elegancia atemporal.',
     information: 'La serie Collect(t)able de Pieter Adam celebra un diseño sofisticado que irradia elegancia y distinción. Mesas rectangulares y redondas dialogan con tapas realizadas en materiales sostenibles —bambú, selenita y marquetería de paja— que revelan un refinado lenguaje geométrico.',
