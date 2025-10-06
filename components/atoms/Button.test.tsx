@@ -5,7 +5,7 @@ import Button from './Button';
 // Mock Next.js Link component
 jest.mock('next/link', () => ({
   __esModule: true,
-  default: ({ children, href, className, style }: any) => {
+  default: ({ children, href, className, style }: { children: React.ReactNode; href: string; className?: string; style?: React.CSSProperties }) => {
     return <a href={href} className={className} style={style}>{children}</a>;
   },
 }));

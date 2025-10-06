@@ -4,7 +4,7 @@ import ProductGrid from './ProductGrid';
 // Mock Next.js Image component
 jest.mock('next/image', () => ({
   __esModule: true,
-  default: (props: any) => {
+  default: (props: React.ImgHTMLAttributes<HTMLImageElement>) => {
     // eslint-disable-next-line jsx-a11y/alt-text, @next/next/no-img-element
     return <img {...props} />;
   },
@@ -13,7 +13,7 @@ jest.mock('next/image', () => ({
 // Mock Next.js Link component
 jest.mock('next/link', () => ({
   __esModule: true,
-  default: ({ children, href, className }: any) => {
+  default: ({ children, href, className }: { children: React.ReactNode; href: string; className?: string }) => {
     return <a href={href} className={className}>{children}</a>;
   },
 }));
